@@ -1,0 +1,27 @@
+{
+  "name": "oort-erc20-upgradable",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@openzeppelin/contracts": "^4.9.6",
+    "@openzeppelin/contracts-upgradeable": "^4.9.6",
+    "@openzeppelin/hardhat-upgrades": "^1.28.0",
+    "@typechain/ethers-v5": "^8.0.5",
+    "@typechain/hardhat": "^3.0.0",
+    "hardhat-gas-reporter": "^1.0.10",
+    "solidity-coverage": "^0.7.22",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.2"
+  }
+}
