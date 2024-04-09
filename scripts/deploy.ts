@@ -20,20 +20,6 @@ async function main() {
     "OORTUUPS deployed to:",
     tokenOORTUUPS.address
   );
-
-  /**********************************************
-   * Uncomment if you want to perfom an upgrade *
-   **********************************************/
-  /* const UpgradeUUPS = await ethers.getContractFactory("NewOORT");
-  // eslint-disable-next-line no-unused-vars
-   const upgradedUUPS = await upgrades.upgradeProxy(
-     "", // Set Token address here
-     UpgradeUUPS
-   );
-
-   console.log("OORT UUPS upgraded");
-   
-   console.log(upgradedUUPS.address);*/
 }
 
 main().catch((error) => {
