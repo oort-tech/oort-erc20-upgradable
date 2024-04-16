@@ -8,16 +8,17 @@ async function main() {
    ****************************************/
   // Deploying `OORT Upgradable`
   const oortUUPS = await ethers.getContractFactory(
-    "OORTUUPS"
+    "OORT"
   );
   const tokenOORTUUPS = await upgrades.deployProxy(oortUUPS, [], {
     initializer: "initialize",
     kind: "uups",
+    unsafeAllow: ["selfdestruct"],
   });
   await tokenOORTUUPS.deployed();
 
   console.log(
-    "OORTUUPS deployed to:",
+    "OORT Upgradable deployed to:",
     tokenOORTUUPS.address
   );
 }
