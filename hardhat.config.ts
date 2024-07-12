@@ -7,13 +7,12 @@ import "hardhat-gas-reporter";
 import "solidity-coverage";
 import "@nomiclabs/hardhat-etherscan";
 import "@openzeppelin/hardhat-upgrades";
-//import "@nomiclabs/hardhat-truffle5";
 
 dotenv.config();
 
 const config: HardhatUserConfig = {
   solidity: {
-    version: "0.8.9",
+    version: "0.8.21",
     settings: {
       optimizer: {
         enabled: true,
@@ -22,11 +21,8 @@ const config: HardhatUserConfig = {
     },
   },
   networks: {
-    hardhat: {
-      initialBaseFeePerGas: 0,
-    },
     oort: {
-      url: process.env.MAIN_URL || "http://localhost:8788",
+      url: process.env.MAIN_URL || "",
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [""],
     },
@@ -36,7 +32,7 @@ const config: HardhatUserConfig = {
     currency: "",
   },
   etherscan: {
-    apiKey: process.env.ETHERSCAN_API_KEY,
+    apiKey: process.env.ETHERSCAN_API_KEY || "",
   },
 };
 
