@@ -35,7 +35,7 @@ contract OORT is
 
   function initialize() public initializer {
     __ERC20_init("OORT", "OORT");
-    __ERC20Capped_init(200000000 * 10**decimals());
+    __ERC20Capped_init(1000000000 * 10**decimals());
     __ERC20Burnable_init();
     __Pausable_init();
     __AccessControl_init();
